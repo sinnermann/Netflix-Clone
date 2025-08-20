@@ -7,7 +7,7 @@ import caret_img from "../../assets/caret_icon.svg"
 import { useEffect, useRef } from "react";
 
 const Navbar = () => {
-
+ 
   const navRef = useRef();
 
   useEffect(() => {
