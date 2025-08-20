@@ -39,7 +39,7 @@ const Player = () => {
       <img
         src={back_arrow_icon}
         alt="back-arrow"
-        onClick={() => {navigate("/")}} />
+        onClick={() => {navigate("/home")}} />
       <iframe
         width="90%"
         height="90%"

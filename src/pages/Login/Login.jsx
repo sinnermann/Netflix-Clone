@@ -1,25 +1,32 @@
 import "./Login.css";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();  // prevent page refresh
+    navigate("/home");   // <-- navigate to Home.jsx route
+  };
 
   return (
     <div className="login">
       <img src={logo} className="login-logo" alt="login-logo" />
       <div className="login-form">
         <h1>{signState}</h1>
-        <form>
+        <form onSubmit={handleSubmit}>
           {signState === "Sign Up" ? (
-            <input type="text" placeholder="Your Name" />
+            <input type="text" placeholder="Click RED BUTTON to See Home Page" />
           ) : (
             <></>
           )}
 
-          <input type="email" placeholder="Your Email" />
-          <input type="password" placeholder="Password" />
-          <button>{signState}</button>
+          <input type="email" placeholder="Click RED BUTTON to See Home Page" />
+          <input type="password" placeholder="Click RED BUTTON to See Home Page" />
+          <button >{signState}</button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
